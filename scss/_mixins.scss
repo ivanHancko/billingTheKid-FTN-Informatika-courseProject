@@ -1,0 +1,16 @@
+@mixin mains {
+    margin: 0;
+    padding: 0;
+    font-family:$font ;
+    color: $color3;
+}
+
+@mixin rows{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin columns {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,18 +1,14 @@
 @import 'vars';
+@import 'mixins';
 
 *{
-    margin: 0;
-    padding: 0;
-    font-family:$font ;
-    color: $color3;
+    @include mains;
 }
 
 header {
-  
     background-color: $color2;
-    display: flex;
+    @include rows;
     align-items: center;
-    flex-direction: row;
     justify-content: end;
     nav {
 
@@ -20,11 +16,9 @@ header {
         justify-content: end;
 
         ul {
-            display: flex;
-            flex-direction: row;
+            @include rows;
             list-style: none;
             li {
-                
                 a{
                     margin: 0 30px;
                     text-decoration: none;
@@ -56,8 +50,7 @@ header {
     display: flex;
     align-items: end;
     .firstHeading {
-        display: flex;
-        flex-direction: column;
+        @include columns;
         align-items: center;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.455);
@@ -100,9 +93,8 @@ header {
 
 .third {
     background-color: $color6;
-   padding: 20px;
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+    @include columns;
     align-items: center;
     justify-content: center;
  
@@ -134,8 +126,7 @@ header {
 }
 
 .fourth {
-    display: flex;
-    flex-direction: column;
+    @include columns;
     align-items: center;
     h1{
         margin: 30px;
@@ -195,8 +186,7 @@ header {
 }
 
 footer{
-    display: flex;
-    flex-direction: column;
+    @include columns;
     background-color: $color6;
     padding: 20px;
     .contact{
@@ -210,9 +200,8 @@ footer{
             background-color: $color1;
             width: 40%;
             height: 250px;
-            display: flex;
+            @include rows;
             flex-wrap: wrap;
-            flex-direction: row;
             align-items: center;
             justify-content: space-between;
             select{
@@ -257,9 +246,9 @@ footer{
 
     header {
         background-color: $color2;
-        display: flex;
+        @include columns;
         align-items: center;
-        flex-direction: column;
+        
         nav {
             order: 2;
             ul {
@@ -277,7 +266,7 @@ footer{
             height: auto;
             img {
                 width: 5%;
-            padding: 5px;
+                padding: 5px;
             }
         }
     }
@@ -294,17 +283,15 @@ footer{
     }
     .third {
         background-color: $color6;
-       padding: 20px;
-        display: flex;
-        flex-direction: column;
+        padding: 20px;
+        @include columns;
         align-items: center;
         justify-content: center;
      
     
         .images {
             justify-content: space-between;
-            display: flex;
-            flex-direction: column;
+            @include columns;
             align-items: center;
             margin: 10px;
             img{
@@ -329,8 +316,7 @@ footer{
         }
     }
     .fourth {
-        display: flex;
-        flex-direction: column;
+        @include columns;
         align-items: center;
         h1{
             margin: 30px;
