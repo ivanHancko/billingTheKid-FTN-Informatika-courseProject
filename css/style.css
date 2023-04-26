@@ -207,6 +207,7 @@ footer .contact form input[type=email] {
 }
 footer .contact form textarea {
   width: 100%;
+  padding: 5px;
 }
 footer h1 {
   text-align: center;
