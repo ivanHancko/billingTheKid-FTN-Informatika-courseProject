@@ -1,3 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #797979;
+}
 
+header {
+  background-color: #374249;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: end;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+header nav ul li a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #f3f7f9;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header .headImg {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f38181;
+}
+header .headImg img {
+  padding: 10px;
+}
+
+.first {
+  background-image: url(../slike/intro.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
+}
+.first .firstHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.455);
+  padding: 10px;
+}
+.first .firstHeading p, .first .firstHeading h1, .first .firstHeading h6 {
+  color: #f3f7f9;
+}
+.first .firstHeading p {
+  font-size: 1em;
+}
+.first .firstHeading h1 {
+  font-size: 2.5em;
+}
+.first .firstHeading h6 {
+  font-size: 1em;
+}
+
+.second {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 50px;
+}
+.second button {
+  background-color: #f3f7f9;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 1px solid #797979;
+  margin: 0 30px;
+}
+.second button:hover {
+  background-color: #cfd1d3;
+  color: #f3f7f9;
+}
+
+.third {
+  background-color: #f3f7f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third .images {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.third .images img {
+  border-radius: 100%;
+  width: 20%;
+  opacity: 0.4;
+}
+.third .images .hp {
+  opacity: 0;
+}
+.third .images .hp p {
+  color: #f38181;
+}
+.third .images:hover .hp {
+  opacity: 1;
+}
+.third .images:hover img {
+  opacity: 1;
+}
+
+.fourth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fourth h1 {
+  margin: 30px;
+}
+.fourth p {
+  margin: 20px;
+}
+.fourth button {
+  display: none;
+}
+.fourth table {
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.fourth table thead tr .red {
+  background-color: #f38181;
+  color: #f3f7f9;
+  padding: 5px;
+  border: 1px solid #797979;
+}
+.fourth table thead tr .black {
+  background-color: #374249;
+  color: #f3f7f9;
+  padding: 5px;
+  border: 1px solid #797979;
+}
+.fourth table thead tr td {
+  border: 1px solid #374249;
+}
+.fourth table tbody tr .red {
+  background-color: #f38181;
+  color: #f3f7f9;
+  padding: 5px;
+  border: 1px solid #797979;
+}
+.fourth table tbody tr .black {
+  background-color: #374249;
+  color: #f3f7f9;
+  padding: 5px;
+  border: 1px solid #797979;
+}
+.fourth table tbody tr td {
+  border: 1px solid #374249;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f7f9;
+  padding: 20px;
+}
+footer .contact {
+  display: flex;
+  justify-content: space-around;
+}
+footer .contact form {
+  padding: 10px;
+  background-color: #f38181;
+  width: 40%;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .contact form select {
+  width: 20%;
+  padding: 5px;
+}
+footer .contact form input[type=text] {
+  width: 70%;
+  padding: 5px;
+}
+footer .contact form input[type=email] {
+  width: 100%;
+  padding: 5px;
+}
+footer .contact form textarea {
+  width: 100%;
+}
+footer h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  footer .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .contact form {
+    margin-top: 20px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    background-color: #374249;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  header nav {
+    order: 2;
+  }
+  header nav ul {
+    align-items: center;
+    flex-direction: column;
+  }
+  header nav ul li {
+    padding: 15px;
+  }
+  header .headImg {
+    order: 1;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  header .headImg img {
+    width: 5%;
+    padding: 5px;
+  }
+  .first {
+    background: #374249;
+    height: 20vh;
+  }
+  .second {
+    width: 100%;
+  }
+  .second button {
+    padding: 10px 10px;
+    margin: 0 10px;
+  }
+  .third {
+    background-color: #f3f7f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .third .images {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  .third .images img {
+    border-radius: 100%;
+    width: 20%;
+    opacity: 1;
+    order: 1;
+  }
+  .third .images .hp {
+    order: 2;
+    text-align: center;
+    opacity: 1;
+  }
+  .third .images .hp h2 {
+    font-size: medium;
+  }
+  .third .images .hp p {
+    color: #f38181;
+    font-size: small;
+  }
+  .fourth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fourth h1 {
+    margin: 30px;
+  }
+  .fourth p {
+    margin: 0px;
+  }
+  .fourth button {
+    display: block;
+    background-color: #f3f7f9;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid #797979;
+    margin: 30px 30px;
+  }
+  .fourth button:hover {
+    background-color: #cfd1d3;
+    color: #f3f7f9;
+  }
+  .fourth table {
+    display: none;
+  }
+  footer .contact form select {
+    width: 100%;
+    margin: 5px 0;
+  }
+  footer .contact form input[type=text] {
+    width: 100%;
+    margin: 5px 0;
+  }
+  footer .contact form input[type=email] {
+    margin: 5px 0;
+  }
+  footer .contact form textarea {
+    height: 100px;
+  }
+  footer h1 {
+    text-align: center;
+    margin: 30px 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
